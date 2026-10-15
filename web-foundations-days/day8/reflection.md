@@ -1,0 +1,7 @@
+# Day 8 Reflection
+
+The most difficult concept in the course was designing for concurrent requests while keeping data correct. It is easy to check whether a seat appears available, but two buyers can make that check at almost the same time. I worked through the problem by separating a display of availability from the authoritative hold operation, then using a database transaction, row locking, a unique constraint on each seat claim, and idempotency keys. This helped me understand why correctness must be enforced by the database rather than depending only on front-end logic.
+
+Based on the feedback I received on my capstone, the part I would improve is **[replace this with the specific area mentioned in your feedback—for example, explaining the architecture and its failure-handling paths more clearly]**. For TicketHub, I would make that improvement by adding more detail to the relevant diagram, documenting failure scenarios, and testing the design with realistic concurrent requests instead of relying only on average traffic estimates.
+
+Next, I want to learn more about load testing and observability, including how to use performance tests to find bottlenecks and how to monitor latency, errors, queue depth, and database contention in production. I would also like to practise implementing transactional seat holds and idempotent payment flows in a small working application. These skills would help me move from a design that looks correct on paper to a system whose behavior can be measured and trusted under pressure.
