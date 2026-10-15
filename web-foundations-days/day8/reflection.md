@@ -1,4 +1,4 @@
-# Day 8 Reflection
+﻿# Day 8 Reflection
 
 The most difficult concept in this assignment was preventing double-booking when many buyers try to reserve the same seat simultaneously. Two users may see a seat as available, so the system cannot rely on the seat map or client-side checks alone. I addressed this by using database transactions, row locking, unique constraints on seat claims, and idempotency keys to protect reservations and payment processing.
 
